@@ -14,11 +14,6 @@ public class RotateMatrix {
     }
 
     private static void rotateMatrix() {
-
-        //  3 11 7           3
-        //  14 6 9  ->       11
-        //  10 5 2           7
-
         for (int i = 0; i < inputMatrix.length; i++) {
             for (int j = 0; j < inputMatrix[i].length; j++) {
                 resultMatrix[j][inputMatrix.length - 1 - i] = inputMatrix[i][j];
