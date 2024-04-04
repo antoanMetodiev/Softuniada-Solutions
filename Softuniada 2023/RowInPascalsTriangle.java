@@ -21,8 +21,6 @@ public class RowInPascalsTriangle {
             }
             pascalNumbers.add(numbers);
         }
-        
         System.out.println(String.join(" ", pascalNumbers.get(n).toString().replaceAll("[\\[\\],]", "")));
     }
 }
-
