@@ -20,6 +20,42 @@ public class Rocket {
         printThirdPart();
     }
 
+     private static void printFirstPart() {
+        int endIndex = (n + 5 - 1) / 2;
+        printHeaderOfTheFirstPart(endIndex);  // 90% similar for every case! (underscores are not).
+        endIndex -= 2;
+
+        for (int i = 0; i < n; i++) {
+
+            printUnderscores(endIndex);
+            printTheMiddleOfTheCol();
+            printUnderscores(endIndex);
+            endIndex--;
+
+            if (firstPartIsFinal) {
+                break;
+            } else {
+                System.out.println();
+            }
+        }
+    }
+
+     private static void printSecondPart() {
+        System.out.print("_");
+        dotCount = (n / 2) - 1;
+        printTheMiddleOfTheCol();
+        System.out.print("_");
+        System.out.println();
+
+        int endIndex = (n + 5 - 2) / 2;
+        for (int i = 0; i < n; i++) {
+            printUnderscores(endIndex);
+            System.out.print("|||");
+            printUnderscores(endIndex);
+            System.out.println();
+        }
+    }
+
     private static void printThirdPart() {
         int endIndex = (n + 5 - 2) / 2;
         printUnderscores(endIndex);
@@ -38,42 +74,6 @@ public class Rocket {
             printUnderscores(endIndex);
             System.out.println();
             endIndex--;
-        }
-    }
-
-    private static void printSecondPart() {
-        System.out.print("_");
-        dotCount = (n / 2) - 1;
-        printTheMiddleOfTheCol();
-        System.out.print("_");
-        System.out.println();
-
-        int endIndex = (n + 5 - 2) / 2;
-        for (int i = 0; i < n; i++) {
-            printUnderscores(endIndex);
-            System.out.print("|||");
-            printUnderscores(endIndex);
-            System.out.println();
-        }
-    }
-
-    private static void printFirstPart() {
-        int endIndex = (n + 5 - 1) / 2;
-        printHeaderOfTheFirstPart(endIndex);  // 90% similar for every case! (underscores are not).
-        endIndex -= 2;
-
-        for (int i = 0; i < n; i++) {
-
-            printUnderscores(endIndex);
-            printTheMiddleOfTheCol();
-            printUnderscores(endIndex);
-            endIndex--;
-
-            if (firstPartIsFinal) {
-                break;
-            } else {
-                System.out.println();
-            }
         }
     }
 
