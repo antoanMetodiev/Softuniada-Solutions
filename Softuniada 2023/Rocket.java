@@ -20,7 +20,7 @@ public class Rocket {
         printThirdPart();
     }
 
-     private static void printFirstPart() {
+    private static void printFirstPart() {
         int endIndex = (n + 5 - 1) / 2;
         printHeaderOfTheFirstPart(endIndex);  // 90% similar for every case! (underscores are not).
         endIndex -= 2;
@@ -40,14 +40,14 @@ public class Rocket {
         }
     }
 
-     private static void printSecondPart() {
+    private static void printSecondPart() {
         System.out.print("_");
         dotCount = (n / 2) - 1;
         printTheMiddleOfTheCol();
         System.out.print("_");
         System.out.println();
 
-        int endIndex = (n + 5 - 2) / 2;
+        double endIndex = Math.floor((double) (n + 5 - 3) / 2);
         for (int i = 0; i < n; i++) {
             printUnderscores(endIndex);
             System.out.print("|||");
@@ -57,7 +57,7 @@ public class Rocket {
     }
 
     private static void printThirdPart() {
-        int endIndex = (n + 5 - 2) / 2;
+        int endIndex = (n + 5 - 3) / 2;
         printUnderscores(endIndex);
         System.out.print("~~~");
         printUnderscores(endIndex);
@@ -115,7 +115,7 @@ public class Rocket {
         }
     }
 
-    private static void printUnderscores(int endIndex) {
+    private static void printUnderscores(double endIndex) {
         for (int i = 0; i < endIndex; i++) {
             System.out.print("_");
         }
