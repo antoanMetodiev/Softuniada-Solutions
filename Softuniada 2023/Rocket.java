@@ -20,43 +20,6 @@ public class Rocket {
         printThirdPart();
     }
 
-    private static void printThirdPart() {
-        int endIndex = (n + 5 - 2) / 2;
-        printUnderscores(endIndex);
-        System.out.print("~~~");
-        printUnderscores(endIndex);
-        System.out.println();
-        endIndex--;
-
-        for (int i = 0; i < n / 2; i++) {
-            printUnderscores(endIndex);
-            System.out.print("//");
-            printDots(i);
-            System.out.print("!");
-            printDots(i);
-            System.out.print("\\\\");
-            printUnderscores(endIndex);
-            System.out.println();
-            endIndex--;
-        }
-    }
-
-    private static void printSecondPart() {
-        System.out.print("_");
-        dotCount = (n / 2) - 1;
-        printTheMiddleOfTheCol();
-        System.out.print("_");
-        System.out.println();
-
-        int endIndex = (n + 5 - 2) / 2;
-        for (int i = 0; i < n; i++) {
-            printUnderscores(endIndex);
-            System.out.print("|||");
-            printUnderscores(endIndex);
-            System.out.println();
-        }
-    }
-
     private static void printFirstPart() {
         int endIndex = (n + 5 - 1) / 2;
         printHeaderOfTheFirstPart(endIndex);  // 90% similar for every case! (underscores are not).
@@ -74,6 +37,43 @@ public class Rocket {
             } else {
                 System.out.println();
             }
+        }
+    }
+
+    private static void printSecondPart() {
+        System.out.print("_");
+        dotCount = (n / 2) - 1;
+        printTheMiddleOfTheCol();
+        System.out.print("_");
+        System.out.println();
+
+        double endIndex = Math.floor((double) (n + 5 - 3) / 2);
+        for (int i = 0; i < n; i++) {
+            printUnderscores(endIndex);
+            System.out.print("|||");
+            printUnderscores(endIndex);
+            System.out.println();
+        }
+    }
+
+    private static void printThirdPart() {
+        int endIndex = (n + 5 - 3) / 2;
+        printUnderscores(endIndex);
+        System.out.print("~~~");
+        printUnderscores(endIndex);
+        System.out.println();
+        endIndex--;
+
+        for (int i = 0; i < n / 2; i++) {
+            printUnderscores(endIndex);
+            System.out.print("//");
+            printDots(i);
+            System.out.print("!");
+            printDots(i);
+            System.out.print("\\\\");
+            printUnderscores(endIndex);
+            System.out.println();
+            endIndex--;
         }
     }
 
@@ -115,7 +115,7 @@ public class Rocket {
         }
     }
 
-    private static void printUnderscores(int endIndex) {
+    private static void printUnderscores(double endIndex) {
         for (int i = 0; i < endIndex; i++) {
             System.out.print("_");
         }
