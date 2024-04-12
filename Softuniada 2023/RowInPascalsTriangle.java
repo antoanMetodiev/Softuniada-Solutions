@@ -14,10 +14,10 @@ public class RowInPascalsTriangle {
             for (int j = 1; j <= i; j++) {
                 if (j == 1 || j == i) {
                     numbers.add(1);
-                } else {
-                    int createdNumber = pascalNumbers.get(i - 2).get(j - 2) + pascalNumbers.get(i - 2).get(j - 1);
-                    numbers.add(createdNumber);
+                    continue;
                 }
+                int createdNumber = pascalNumbers.get(i - 2).get(j - 2) + pascalNumbers.get(i - 2).get(j - 1);
+                numbers.add(createdNumber);
             }
             pascalNumbers.add(numbers);
         }
