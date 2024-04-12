@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Rocket {
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final int n = Integer.parseInt(scanner.nextLine());
+    private static int n = 0;
     private static boolean firstPartIsFinal = false;
     private static int dotCount = 0;  // for col
 
@@ -15,6 +14,8 @@ public class Rocket {
         //  (.) - dot
         //  (!) - exclamation mark
 
+        Scanner scanner = new Scanner(System.in);
+        n = Integer.parseInt(scanner.nextLine());
         printFirstPart();  // <<- around the dots!
         printSecondPart();
         printThirdPart();
