@@ -6,14 +6,6 @@ public class Rocket {
     private static int dotCount = 0;  // for col
 
     public static void main(String[] args) {
-        //  (^) - caret
-        //  (_) - underscore
-        //  (|) - pipe
-        //  (~) - tilde
-        //  (/) - slash
-        //  (.) - dot
-        //  (!) - exclamation mark
-
         Scanner scanner = new Scanner(System.in);
         n = Integer.parseInt(scanner.nextLine());
         printFirstPart();  // <<- around the dots!
