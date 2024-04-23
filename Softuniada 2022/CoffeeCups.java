@@ -12,28 +12,12 @@ public class CoffeeCups {
         printThirdPart();
     }
 
-    private static void printThirdPart() {
-        int monkeyACount = 6; // count for this "@", with initial 6 from them!;
-        String emptySpaces = "";
-        for (int i = 0; i < n - 1; i++) {
-            monkeyACount += 2;
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.print(emptySpaces);
-            System.out.print("\\");
-            for (int j = 0; j < monkeyACount; j++) {
-                System.out.print("@");
-            }
-            System.out.println("/");
-            monkeyACount -= 2;
-            emptySpaces += " ";
-        }
-        for (int i = 0; i < colWidth - 1; i++) {
-            System.out.print("-");
-        }
+    private static void printFirstPart() {
+        printTildes();
+        printEqualSigns(); // i mean "="!
     }
 
-    private static void printSecondPart() {
+     private static void printSecondPart() {
         String tildes = "";
         String emptySpaces = "";
         String tildesWithEqualLengthOfTextProperty = "";
@@ -55,10 +39,26 @@ public class CoffeeCups {
         }
         printEqualSigns();
     }
-
-    private static void printFirstPart() {
-        printTildes();
-        printEqualSigns(); // i mean "="!
+    
+    private static void printThirdPart() {
+        int monkeyACount = 6; // count for this "@", with initial 6 from them!;
+        String emptySpaces = "";
+        for (int i = 0; i < n - 1; i++) {
+            monkeyACount += 2;
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.print(emptySpaces);
+            System.out.print("\\");
+            for (int j = 0; j < monkeyACount; j++) {
+                System.out.print("@");
+            }
+            System.out.println("/");
+            monkeyACount -= 2;
+            emptySpaces += " ";
+        }
+        for (int i = 0; i < colWidth - 1; i++) {
+            System.out.print("-");
+        }
     }
 
     private static void printEqualSigns() {
