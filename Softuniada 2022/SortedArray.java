@@ -19,17 +19,13 @@ public class SortedArray {
                 numbers[i] = numbers[i + 1];
                 numbers[i + 1] = currentNum;
             }
-
+            
             if (flag.equals("odd")) {
                 flag = "even";
                 continue;
             }
             flag = "odd";
         }
-
         System.out.println(String.join(" ", Arrays.toString(numbers).replaceAll("[\\[\\],]", "")));
     }
-
 }
-
-
