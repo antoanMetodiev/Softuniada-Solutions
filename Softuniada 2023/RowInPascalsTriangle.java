@@ -9,7 +9,6 @@ public class RowInPascalsTriangle {
         List<List<Integer>> pascalNumbers = new ArrayList<>();
 
         for (int i = 1; i <= n + 1; i++) {
-
             List<Integer> numbers = new ArrayList<>();
             for (int j = 1; j <= i; j++) {
                 if (j == 1 || j == i) {
