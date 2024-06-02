@@ -25,4 +25,3 @@ public class EasterPrize {
         return true;
     }
 }
-
