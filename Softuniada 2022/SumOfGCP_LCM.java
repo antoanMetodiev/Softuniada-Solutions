@@ -13,18 +13,14 @@ public class SumOfGCP_LCM {
 
     private static int findLeastCommonMultiple(int firstNum, int secondNum) {
         for (int i = 1; i < 1000000; i++) {
-            if ((i / firstNum * firstNum == i) && (i / secondNum * secondNum == i)) {
-                return i;
-            }
+            if ((i / firstNum * firstNum == i) && (i / secondNum * secondNum == i)) return i;
         }
         return 0;
     }
 
     private static void findBiggerDivider(int firstNum, int secondNum) {
         for (int i = 1; i < 1000000; i++) {
-            if (firstNum % i == 0 && secondNum % i == 0) {
-                biggerDivider = i;
-            }
+            if (firstNum % i == 0 && secondNum % i == 0) biggerDivider = i;
         }
     }
 }
